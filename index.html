@@ -3,9 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Theme &amp; Typography Playground</title>
 </head>
 <body>
-    
+<main>
+    <header>
+        <img src="img/paint-palette.jpg" alt="a watercolour paint palette showing off its colours">
+    <h1>The Architecture of Colour: Perception, Language, and Design</h1>
+    <p>Colour feels like an objective property of the physical world—a lemon is yellow, the sky is blue, a stop sign is red. Yet modern physics and neuroscience tell a far stranger story. Out in the universe, there is no colour at all; there is only electromagnetic radiation traveling at different wavelengths. Colour is a biological translation, a sensory story the human brain constructs to help us navigate our environment, identify ripe fruit, read emotional cues, and organize visual chaos.</p>
+    <p>Understanding how colour works—from the optics of light to the psychology of perception and the systems designers use to control it—transforms it from mere decoration into one of the most precise tools in visual communication.</p>
+    </header>
+    <section>
+        <h2>1. The Physics and Biology of Seeing</h2>
+        <p>Visible light occupies a remarkably narrow sliver of the electromagnetic spectrum, spanning wavelengths from roughly 380 nanometres (violet) to 700 nanometres (red). When light strikes a physical surface, molecules within that material absorb certain wavelengths and reflect others. A leaf appears green not because it contains "greenness," but because chlorophyll absorbs red and blue light for photosynthesis while bouncing green wavelengths back toward your eyes.</p>
+        <p>Once reflected light enters the eye, it lands on the retina, which houses two primary types of photoreceptor cells:</p>
+        <ul>
+            <li><strong>Rods:</strong> Extremely sensitive to low light, responsible for night vision and peripheral motion detection, though largely blind to hue.</li>
+            <li><strong>Cones:</strong> Active in brighter light and tuned to three overlapping wavelength ranges—short (S-cones, peaking near blue), medium (M-cones, peaking near green), and long (L-cones, peaking near yellow-red).</li>
+        </ul>
+        <p>Colour does not happen in the eye; it happens in the visual cortex. The brain compares the relative firing rates of the S, M, and L cones—a process known as opponent-process theory—evaluating signals along three axes: red versus green, blue versus yellow, and light versus dark. Because perception relies on relative comparison rather than absolute measurement, the same physical wavelength can appear wildly different depending on surrounding colours and ambient lighting.</p>
+        <blockquote cite="https://www.albersfoundation.org/alberses/teaching/interaction-of-color">
+            <p>"In visual perception a color is almost never seen as it really is—as it physically is. This fact makes color the most relative medium in art."</p>
+        </blockquote>
+        <p>— Josef Albers, <cite>Interaction of Colo</cite>r</p>
+    </section>
+    <section>
+        <h2>2. How Language Shapes What We See</h2>
+        <p>If human eyes share the same cone physiology across populations, do all cultures perceive colour the same way? Linguists and cognitive scientists have spent decades investigating this question, revealing a fascinating interplay between biology and vocabulary.</p>
+        <p>In 1969, anthropologists Brent Berlin and Paul Kay analyzed colour terms across dozens of languages and discovered a remarkably consistent evolutionary sequence:</p>
+        <ol>
+            <li>Languages with only two basic colour terms always distinguish between <i>dark/cool</i> (black) and <i>light/warm</i> (white).</li>
+            <li>A <strong>third</strong> term is almost universally <i>red</i>.</li>
+            <li>The <strong>fourth</strong> and <strong>fifth</strong> terms add <i>green</i> and <i>yellow</i> (in either order).</li>
+            <li><strong>Blue</strong> typically emerges sixth, followed later by <i>brown</i>, <i>purple</i>, <i>pin</i>k, <i>orange</i>, and <i>grey</i>.</li>
+        </ol>
+        <p>Notably, many ancient texts—including Homer’s Odyssey—lacked a dedicated word for blue, describing the Mediterranean Sea as "wine-dark." Similarly, Russian distinguishes siniy (dark blue) and goluboy (light blue) as two separate basic colours rather than shades of one hue. Experimental studies show that speakers of languages with distinct names for adjacent hues discriminate between them milliseconds faster than speakers who group them under a single label. Language does not alter the retina, but it sharpens categorical attention.</p>
+    </section>
+    <section>
+        <h2>3. Additive vs. Subtractive Colour Systems</h2>
+        <p>Anyone working across print and digital screens quickly encounters two opposing ways of mixing colour, rooted in whether light is being emitted or absorbed.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Additive Colour (RGB)</th>
+                    <th>Subtractive Colour (CMYK)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Medium</th>
+                    <td>Screens, stage lighting, LEDs</td>
+                    <td>Ink, paint, dye, physical print</td>
+                </tr>
+                <tr>
+                    <th>Mechanism</th>
+                    <td>Combines wavelengths of emitted light</td>
+                    <td>Pigments absorb light; remaining wavelengths reflect</td>
+                </tr>
+                <tr>
+                    <th>Primary Channels</th>
+                    <td>Red, Green, Blue</td>
+                    <td>Cyan, Magenta, Yellow (+ Key/Black)</td>
+                </tr>
+                <tr>
+                    <th>Combining All Primaries</th>
+                    <td>Produces white light</td>
+                    <td>Produces muddy dark brown/black</td>
+                </tr>
+                <tr>
+                    <th>Absence of Primaries</th>
+                    <td>Pure black (screen off)</td>
+                    <td>White of the unprinted paper</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Because screens emit light directly, digital displays can produce luminous, hyper-saturated greens and blues that physical ink on paper simply cannot reflect. This mismatch in colour gamut (the total range of reproducible colours) is why vibrant RGB designs often look muted when converted to CMYK without careful proofing.</p>
+    </section>
+    <section>
+        <h2>4. Deconstructing Colour: Hue, Chroma, and Lightness</h2>
+        <p>Traditional colour wheels teach primary, secondary, and tertiary relationships, which is useful for mixing paint pigments. However, in modern digital design and accessibility engineering, perceptual models like HSL (Hue, Saturation, Lightness) and OKLCH (Lightness, Chroma, Hue) offer far greater control by breaking colour into three independent properties:</p>
+        <ul>
+            <li><strong>Hue:</strong> The base pigment family on the 360-degree colour wheel—red at $0^\circ$, green near $120^\circ$, blue near $240^\circ$.</li>
+            <li><strong>Saturation / Chroma:</strong> The purity or intensity of the colour. High chroma feels energetic and urgent; low chroma feels calm, organic, and atmospheric.</li>
+            <li><strong>Lightness (Value):</strong> How bright or dark the colour appears relative to pure white and pure black.</li>
+        </ul>
+        <p>Of these three attributes, lightness does the heavy lifting for readability and visual hierarchy. If you convert a great interface or painting to greyscale, the composition still reads clearly because the contrast in lightness carries the structure. When designers struggle with clashing palettes, the culprit is rarely the hues themselves—it is almost always competing chroma or insufficient lightness separation between foreground and background.</p>
+    </section>
+    <section>
+        <h2>5. Colour in Interface Design and Accessibility</h2>
+        <p>In contemporary web and product design, colour serves functional duties long before aesthetic ones. It communicates interactive affordances (links, primary actions), system states (success, warning, destructive errors), and spatial depth (elevated cards versus recessed surfaces).</p>
+        <p>Because roughly <strong>8% of men and 0.5% of women</strong> experience some form of colour vision deficiency—most commonly reduced sensitivity to red or green wavelengths—relying on hue alone to convey critical information excludes millions of users. Accessible colour systems follow three foundational practices:</p>
+        <ol>
+            <li><strong>Enforce Contrast Ratios:</strong> Under Web Content Accessibility Guidelines (WCAG), body text requires a minimum luminance contrast ratio of 4.5:1 against its background (or 3:1 for large headings and UI controls).</li>
+            <li><strong>Pair Colour with Secondary Cues:</strong> Error states should combine red borders with warning icons and explicit text; chart lines should vary stroke patterns or point shapes alongside hue.</li>
+            <li><strong>Design Semantic Token Layers:</strong> Rather than hardcoding raw hex values across dozens of components, modern design systems map raw palette scales (e.g., <code>blue-500</code>) to semantic roles (<code>--color-action-primary</code>, <code>--surface-elevated</code>), making dark mode and high-contrast themes systematic rather than reactive.</li>
+        </ol>
+    </section>
+    <section>
+       <h2>6. The Quiet Power of Restraint</h2>
+       <p>Novice designers often reach for too many saturated colours at once, creating visual noise where every element shouts for attention and nothing stands out. Experienced colourists work in reverse: they build a quiet, nuanced foundation of warm or cool neutrals—off-whites, charcoals, slates, and stones—and reserve high-chroma accents for the exact moments that require human focus.</p>
+       <p>Whether studied through a prism, mapped in a colour space, or applied to a digital screen, colour sits at the intersection of physics and human psychology. Mastering it means recognizing that we never choose a colour in isolation; we choose how light, context, and perception interact in the mind of the viewer.</p>
+    </section>
+    <footer>
+        <p>This article content was created by AI. The code was created by Kayden Mayhew. The design is created by you &#128521; </p>
+    </footer>
+</main>
 </body>
 </html>
